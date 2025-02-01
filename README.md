@@ -107,9 +107,9 @@ The data is collected from HealthData.gov, a U.S. government health data reposit
   - Generate Confusion Matrix for each classifier
 - Model Testing
   - Stores the accuracy
-  - plot confusion matrix
-  - save the plot
-  - display
+  - Plot confusion matrix
+  - Save the plot
+  - Display
  
 ## Classifiers
 - RandomForestClassifier
@@ -125,7 +125,7 @@ The data is collected from HealthData.gov, a U.S. government health data reposit
 
 ## Prediction
 - Takes the data given
-- shows the condyion of the patient
+- Shows the condition of the patient
 
 ## Results
 - **Home Page**
