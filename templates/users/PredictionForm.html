@@ -1,0 +1,78 @@
+{% extends 'users/userbase.html' %}
+{% block contents %}
+
+
+ 
+<div class="container mt-5">
+    <h1>{{ msg }}</h1>
+    <h1>Patient Data Form</h1>
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" class="form-control" placeholder="range 1-100" id="age" name="age" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="gender" class="form-label">Gender:</label>
+            <select class="form-select" id="gender" name="gender" required>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="bmi" class="form-label">BMI:</label>
+            <input type="number" placeholder="range 10.0 - 50.0" class="form-control" id="bmi" name="bmi" step="0.01" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="hypertensive" class="form-label">Hyper Tensive:</label>
+            <select class="form-select" id="hypertensive" name="hypertensive" required>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="Diabetes" class="form-label">Diabetes</label>
+            <select class="form-select" id="Diabetes" name="Diabetes" required>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="Depression" class="form-label">Depression</label>
+            <select class="form-select" id="Depression" name="Depression" required>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="heartRate" class="form-label">Heart Rate:</label>
+            <input type="number" placeholder="range 40 - 200" class="form-control" id="heartRate" name="heartRate" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="respiratoryRate" class="form-label">Respiratory Rate:</label>
+            <input type="number" placeholder="range 10 - 30" class="form-control" id="respiratoryRate" name="respiratoryRate" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="temperature" class="form-label">Temperature:</label>
+            <input type="number" placeholder="range 35 - 42" class="form-control" id="temperature" name="temperature" step="0.01" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="rbc" class="form-label">RBC:</label>
+            <input type="number" placeholder="range 3.0 - 6.0" class="form-control" id="rbc" name="rbc" step="0.01" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+ 
+
+{% endblock %}

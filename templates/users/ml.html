@@ -1,0 +1,47 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifier Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Classifier Results</h1></center>
+    <table>
+        <tr>
+            <th>Classifier</th>
+            <th>Accuracy</th>
+            <th>Classification Report</th>
+            <!--   <th>Confusion Matrix</th> -->
+        </tr>
+        {% for clf_name, result in results.items %}
+        <tr>
+            <td>{{ clf_name }}</td>
+            <td><span style="color: rgb(252, 7, 7);"><b>{{ result.accuracy }}</b></span></td>
+            <td><pre>{{ result.classification_report }}</pre></td>
+            <!-- <td><img src="{% static 'confusion_matrix_' + clf_name + '.png' %}" alt="Confusion Matrix"></td> -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+{%endblock%}
