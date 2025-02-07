@@ -156,7 +156,7 @@ The data is collected from HealthData.gov, a U.S. government health data reposit
   ![score](media/patientalgo3.png)
 - Data set
   ![data set](media/patientdataset.png)
-- **Crime Prediction**
+- **Prediction**
   ![prediction](media/patientprediction.png)
 
 
