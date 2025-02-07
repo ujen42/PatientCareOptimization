@@ -59,7 +59,7 @@ The data is collected from HealthData.gov, a U.S. government health data reposit
 1. **Clone the repository:**
 
    ```bash
-   git clone ttps://github.com/ujen42/PatientCareOptimization.git
+   git clone https://github.com/ujen42/PatientCareOptimization.git
 
 2. **Create a virtual environment (optional):**
    ```bash
@@ -70,11 +70,7 @@ The data is collected from HealthData.gov, a U.S. government health data reposit
    ```bash
    pip install -r requirements.txt
    
-4. **Change directory:**
-   ```bash
-   cd Patient_Health_Analysis
-
-5. **Apply migrations:**
+4. **Apply migrations:**
    ```bash
    python manage.py migrate
 
